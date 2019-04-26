@@ -12,6 +12,10 @@ class CashRegister
 
   end
 
+  #if the quanity passed in it is larger than 0, add the increased price to the total
+  #using the quanity variable iterate through a while loop to add each item individually
+  # to the cart.
+
   def add_item(item, price, quanity=1)
     if quanity > 1
       @total = @total + (quanity * price)
@@ -26,16 +30,6 @@ class CashRegister
       @pricelog << price
     end
   end
-
-  # def add_item(item, price, quanity=1)
-  #   if quanity == 1
-  #     @total = @total + price
-  #     @cart  << "#{item} Quanity:#{quanity}"
-  #   else
-  #     @total = @total + (quanity * price)
-  #     @cart  << "#{item} Quanity:#{quanity}"
-  #   end
-  # end
 
   def apply_discount(discount=@discount)
     if discount > 0
@@ -55,3 +49,15 @@ class CashRegister
   end
 
 end
+
+
+
+  # def add_item(item, price, quanity=1)
+  #   if quanity == 1
+  #     @total = @total + price
+  #     @cart  << "#{item} Quanity:#{quanity}"
+  #   else
+  #     @total = @total + (quanity * price)
+  #     @cart  << "#{item} Quanity:#{quanity}"
+  #   end
+  # end
